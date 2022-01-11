@@ -1,0 +1,15 @@
+spring:
+  mail:
+    host: ENC(eMH6AJ/8kWt+WVrlor5S/iVsy3lCL3JWN2inWJF/4Pu0ci5wNrjlbo6kQRWesZ1/IDzT4xA/F/Y=)
+    port: 587
+    username: ENC(RcFAD5t2AGxscDiOeP/D1g==)
+    password: ENC(ilto6FQo15t1yY+zZTYQA9sguRxNCrF1jXCLRD/i9KU=)
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+
