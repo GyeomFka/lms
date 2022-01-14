@@ -21,7 +21,7 @@ public class JasyptConfig {
 		config.setPoolSize("1");
 		config.setAlgorithm("PBEWithMD5AndDES");
 		config.setStringOutputType("base64");
-		config.setStringOutputType("1000");
+		config.setStringOutputType("1000") ;
 		config.setSaltGeneratorClassName("org.jasypt.salt.RandomSaltGenerator");
         encryptor.setConfig(config);
         return encryptor;

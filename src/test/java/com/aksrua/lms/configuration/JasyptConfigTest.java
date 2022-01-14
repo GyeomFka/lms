@@ -9,9 +9,9 @@ class JasyptConfigTest {
 
     @Test
     void jasypt() {
-        String host = "host";
-        String username = "mail";
-        String password = "key";
+        String host = "smtp.gmail.com";
+        String username = "myMail";
+        String password = "mailKey";
 
         String encryptHost = jasyptEncrypt(host);
         String encryptUsername = jasyptEncrypt(username);
@@ -27,16 +27,24 @@ class JasyptConfigTest {
 
     }
 
+
     private String jasyptEncrypt(String input) {
-        String key = "password";
+		/**
+		 * @key = -Djasypt.encryptor.password={key}
+		 */
+		String key = "key";
         StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
         encryptor.setAlgorithm("PBEWithMD5AndDES");
         encryptor.setPassword(key);
         return encryptor.encrypt(input);
     }
 
+
     private String jasyptDecryt(String input) {
-        String key = "password";
+		/**
+		 * @key = -Djasypt.encryptor.password={key}
+		 */
+    	String key = "key";
         StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
         encryptor.setAlgorithm("PBEWithMD5AndDES");
         encryptor.setPassword(key);
